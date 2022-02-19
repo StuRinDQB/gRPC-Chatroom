@@ -1,0 +1,38 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.yiming.grpc;
+
+message HelloRequest {
+    string Name = 1;
+}
+
+message HelloResponse {
+    string greeting = 1;
+}
+
+message SendRequest {
+    int32 id = 1;
+    string message = 2;
+}
+message SendResponse {
+    int32 id = 1;
+    string message = 2;
+}
+
+message SendFromServer {
+    int32 id = 1;
+    string message = 2;
+}
+
+message ClientReceive{
+    int32 id = 1;
+    string message = 2;
+}
+
+
+service HelloService {
+    rpc hello(HelloRequest) returns (HelloResponse);
+    rpc sendMessageToServer(SendRequest) returns (SendResponse);
+    rpc receiveMessageFromServer(SendFromServer) returns (ClientReceive);
+
+}

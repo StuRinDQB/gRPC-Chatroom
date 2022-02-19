@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.21.0" timestamp="2022-02-19T11:44:32.215">
+<file name="/Users/zengyiming/Desktop/OS-Assignment/grpc/src/test/java/com/baeldung/Test.java">
+<violation beginline="8" endline="19" begincolumn="8" endcolumn="1" rule="UnitTestMustFollowNamingConventionRule" ruleset="Baeldung custom pmd rules" package="com.baeldung" class="Test" priority="3">
+Unit test class names need to end in UnitTest, integration tests with IntegrationTest, etc 
+</violation>
+</file>
+<file name="/Users/zengyiming/Desktop/OS-Assignment/grpc/src/test/java/com/baeldung/ThreadPoolExecutorTest.java">
+<violation beginline="6" endline="23" begincolumn="8" endcolumn="1" rule="UnitTestMustFollowNamingConventionRule" ruleset="Baeldung custom pmd rules" package="com.baeldung" class="ThreadPoolExecutorTest" priority="3">
+Unit test class names need to end in UnitTest, integration tests with IntegrationTest, etc 
+</violation>
+</file>
+</pmd>
