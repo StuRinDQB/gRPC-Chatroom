@@ -6,7 +6,6 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
-import lombok.Data;
 
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -14,7 +13,6 @@ import java.util.concurrent.Executors;
 
 //import com.sun.xml.internal.ws.resources.UtilMessages;
 
-@Data
 public class GrpcClient {
     private static Scanner input;
     private String username;
@@ -22,55 +20,55 @@ public class GrpcClient {
     private String message;
     private int id;
     private static SendResponse[] sendResponse1;
-//
-//    public static Scanner getInput() {
-//        return input;
-//    }
-//
-//    public static void setInput(Scanner input) {
-//        GrpcClient.input = input;
-//    }
-//
-//    public String getUsername() {
-//        return username;
-//    }
-//
-//    public void setUsername(String username) {
-//        this.username = username;
-//    }
-//
-//    public ManagedChannel getChannel() {
-//        return channel;
-//    }
-//
-//    public void setChannel(ManagedChannel channel) {
-//        this.channel = channel;
-//    }
-//
-//    public String getMessage() {
-//        return message;
-//    }
-//
-//    public void setMessage(String message) {
-//        this.message = message;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public static SendResponse[] getSendResponse1() {
-//        return sendResponse1;
-//    }
-//
-//    public static void setSendResponse1(SendResponse[] sendResponse1) {
-//        GrpcClient.sendResponse1 = sendResponse1;
-//    }
-//
+
+    public static Scanner getInput() {
+        return input;
+    }
+
+    public static void setInput(Scanner input) {
+        GrpcClient.input = input;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public ManagedChannel getChannel() {
+        return channel;
+    }
+
+    public void setChannel(ManagedChannel channel) {
+        this.channel = channel;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static SendResponse[] getSendResponse1() {
+        return sendResponse1;
+    }
+
+    public static void setSendResponse1(SendResponse[] sendResponse1) {
+        GrpcClient.sendResponse1 = sendResponse1;
+    }
+
     public GrpcClient(){
 
     }
@@ -92,8 +90,8 @@ public class GrpcClient {
         // Only input numbers
         int id = scanner.nextInt();
         int k = 0;
-        GrpcClient grpcClient = new GrpcClient(id);
-        HelloServiceGrpc.HelloServiceBlockingStub stub
+        final GrpcClient grpcClient = new GrpcClient(id);
+        final HelloServiceGrpc.HelloServiceBlockingStub stub
                 = HelloServiceGrpc.newBlockingStub(grpcClient.channel);
 
 
